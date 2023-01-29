@@ -36,9 +36,6 @@ machine: generic-arm64
 
 local_conf_header:
    meta-custom: |
-    FILESEXTRAPATHS:prepend:pn-linux-yocto = "${TOPDIR}/../kernelconfig/:"
-    SRC_URI:append:pn-linux-yocto = " file://gravitonKernelConfigs.cfg "
-
     INHERIT += "extrausers"
     # Hardening: Locking the root password. Creating the ewaol without password for ssh key-based login only
     EXTRA_USERS_PARAMS = "usermod -L root; useradd -p '*' ewaol"
