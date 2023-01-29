@@ -47,7 +47,7 @@ local_conf_header:
     EXTRA_IMAGE_FEATURES:append = "ssh-server-openssh"
     # Forcing removal of debug-tweakes as ewaol includes it in all targets by default and that leads to reversing some sshd_config hardening done in our bbappend when do_rootfs runs
     EXTRA_IMAGE_FEATURES:remove = "debug-tweaks"
-    IMAGE_INSTALL:append = " git rng-tools aws-cli cloud-init cloud-init-systemd e2fsprogs e2fsprogs-resize2fs e2fsprogs-tune2fs e2fsprogs-e2fsck e2fsprogs-mke2fs parted sudo sudo-sudo openssh-sftp-server python3-netifaces python3-charset-normalizer canutils"
+    IMAGE_INSTALL:append = " git rng-tools aws-cli cloud-init cloud-init-systemd e2fsprogs e2fsprogs-resize2fs e2fsprogs-tune2fs e2fsprogs-e2fsck e2fsprogs-mke2fs parted sudo sudo-sudo openssh-sftp-server python3-netifaces python3-charset-normalizer canutils erlang erlang-modules elixir"
     IMAGE_FSTYPES += " wic wic.vhdx"
     DISTRO_FEATURES:append = " ewaol-baremetal"
     # buildhistory
